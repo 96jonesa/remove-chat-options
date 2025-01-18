@@ -9,6 +9,8 @@ import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 @PluginDescriptor(
@@ -34,17 +36,15 @@ public class RemoveChatOptionsPlugin extends Plugin {
 		if (OPTIONS_TO_REMOVE.contains(option)) {
 			MenuEntry[] menuEntries = client.getMenuEntries();
 
-			MenuEntry[] newMenuEntries = new MenuEntry[menuEntries.length - 1];
+			List<MenuEntry> newMenuEntriesList = new LinkedList<>();
 
-			int j = 0;
-			for (int i = 0; i < menuEntries.length; i++) {
-				if (!menuEntries[i].getOption().equals(option)) {
-					newMenuEntries[j] = menuEntries[i];
-					j++;
+			for (MenuEntry menuEntry : menuEntries) {
+				if (!menuEntry.getOption().equals(option)) {
+					newMenuEntriesList.add(menuEntry);
 				}
 			}
 
-			client.setMenuEntries(newMenuEntries);
+			client.setMenuEntries(newMenuEntriesList.toArray(new MenuEntry[0]));
 		}
 	}
 }
