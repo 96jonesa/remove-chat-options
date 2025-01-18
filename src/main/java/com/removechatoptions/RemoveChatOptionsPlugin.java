@@ -12,8 +12,9 @@ import net.runelite.client.plugins.PluginDescriptor;
 import java.util.Set;
 
 @PluginDescriptor(
-		name = "Remove Chat Options",
-		description = "Remove \"Add friend\", \"Add ignore\", \"Message\", and \"Report\" menu options"
+	name = "Remove Chat Options",
+	description = "Remove Add friend, Add ignore, Message, and Report menu options",
+	tags = {"chat"}
 )
 public class RemoveChatOptionsPlugin extends Plugin {
 	private static final String ADD_FRIEND = "Add friend";
