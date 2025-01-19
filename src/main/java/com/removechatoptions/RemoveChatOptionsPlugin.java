@@ -48,7 +48,7 @@ public class RemoveChatOptionsPlugin extends Plugin {
 			final int componentId = menuEntry.getParam1();
 			int groupId = WidgetUtil.componentToInterface(componentId);
 
-			if (groupId != InterfaceID.CHATBOX || chatboxTabComponentIds.contains(componentId)) {
+			if ((groupId != InterfaceID.CHATBOX || chatboxTabComponentIds.contains(componentId)) && groupId != InterfaceID.PRIVATE_CHAT) {
 				newMenuEntriesList.add(menuEntry);
 			}
 		}
