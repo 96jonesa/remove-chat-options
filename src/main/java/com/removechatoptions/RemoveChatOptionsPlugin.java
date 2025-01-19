@@ -22,6 +22,8 @@ import java.util.Set;
 	tags = {"chat"}
 )
 public class RemoveChatOptionsPlugin extends Plugin {
+	private static final int REPORT_BUTTON_COMPONENT_ID = 10616863;
+
 	private static final Set<Integer> chatboxTabComponentIds = Set.of(
 		ComponentID.CHATBOX_TAB_PRIVATE,
 		ComponentID.CHATBOX_TAB_ALL,
@@ -29,7 +31,8 @@ public class RemoveChatOptionsPlugin extends Plugin {
 		ComponentID.CHATBOX_TAB_CLAN,
 		ComponentID.CHATBOX_TAB_GAME,
 		ComponentID.CHATBOX_TAB_TRADE,
-		ComponentID.CHATBOX_TAB_PUBLIC
+		ComponentID.CHATBOX_TAB_PUBLIC,
+		REPORT_BUTTON_COMPONENT_ID
 	);
 
 	@Inject
