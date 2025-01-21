@@ -32,6 +32,7 @@ public class RemoveChatOptionsPlugin extends Plugin {
 		ComponentID.CHATBOX_TAB_GAME,
 		ComponentID.CHATBOX_TAB_TRADE,
 		ComponentID.CHATBOX_TAB_PUBLIC,
+		ComponentID.CHATBOX_GE_SEARCH_RESULTS,
 		REPORT_BUTTON_COMPONENT_ID
 	);
 
