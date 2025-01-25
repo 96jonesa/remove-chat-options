@@ -3,6 +3,7 @@ package com.removechatoptions;
 import javax.inject.Inject;
 
 import net.runelite.api.Client;
+import net.runelite.api.KeyCode;
 import net.runelite.api.MenuEntry;
 import net.runelite.api.events.MenuEntryAdded;
 import net.runelite.api.widgets.ComponentID;
@@ -47,6 +48,12 @@ public class RemoveChatOptionsPlugin extends Plugin {
 
 	@Subscribe
 	public void onMenuEntryAdded(MenuEntryAdded menuEntryAdded) {
+		if (!client.isKeyPressed(KeyCode.KC_CONTROL)) {
+			removeChatOptions();
+		}
+	}
+
+	private void removeChatOptions() {
 		MenuEntry[] menuEntries = client.getMenuEntries();
 
 		List<MenuEntry> newMenuEntriesList = new LinkedList<>();
