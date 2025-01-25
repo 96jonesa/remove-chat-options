@@ -19,7 +19,7 @@ import java.util.Set;
 
 @PluginDescriptor(
 	name = "Remove Chat Options",
-	description = "Remove all chatbox menu options",
+	description = "Remove all chat menu options. Hold the CONTROL key to view chat menu options.",
 	tags = {"chat"}
 )
 public class RemoveChatOptionsPlugin extends Plugin {
