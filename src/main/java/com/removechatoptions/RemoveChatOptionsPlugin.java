@@ -55,10 +55,6 @@ public class RemoveChatOptionsPlugin extends Plugin {
 			final int componentId = menuEntry.getParam1();
 			int groupId = WidgetUtil.componentToInterface(componentId);
 
-			if (menuEntry.getOption().equals("Copy to clipboard")) {
-				System.out.println(menuEntry.getParam1());
-			}
-
 			if ((groupId != InterfaceID.CHATBOX || chatboxTabComponentIds.contains(componentId))
 					&& groupId != InterfaceID.PRIVATE_CHAT
 					&& !additionalOptionsToRemove.contains(menuEntry.getOption())
